@@ -1,0 +1,161 @@
+/* Общие стили */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9fa;
+    color: #333;
+}
+
+.container {
+    max-width: 1024px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Шапка */
+.header {
+    background-color: #fff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+}
+
+.logo {
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: bold;
+    color: #007bff;
+}
+
+.menu ul {
+    list-style-type: none;
+    display: flex;
+}
+
+.menu li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+    padding: 10px;
+    transition: all 0.3s ease;
+}
+
+.menu li a:hover {
+    color: #007bff;
+}
+
+/* Основная часть */
+.content {
+    padding-top: 80px; /* Учитываем высоту фиксированной шапки */
+}
+
+.experience-section .container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.education-section .container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background-color: #fafafa;
+    padding: 20px;
+    border-radius: 6px;
+}
+
+.card h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.card p {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.card ul {
+    list-style-type: none;
+    padding-left: 0;
+    margin-bottom: 0;
+}
+
+.card li {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.skills-section .container {
+    display: flex;
+    gap: 20px;
+}
+
+.quality-icons, .language-icons {
+    display: flex;
+    gap: 20px;
+}
+
+.quality-icons i, .language-icons i {
+    font-size: 24px;
+    color: #007bff;
+    transition: all 0.3s ease;
+}
+
+.quality-icons i:hover, .language-icons i:hover {
+    color: #0056b3;
+}
+
+/* Подвал */
+.footer {
+    background-color: #222;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.footer p {
+    margin: 0;
+}
+
+/* Стили двух колонок с сеткой */
+.two-columns {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Две равные колонки */
+    gap: 20px; /* Расстояние между колонками */
+}
+
+.column ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+@media screen and (max-width: 768px) {
+    .two-columns {
+        grid-template-columns: 1fr; /* Переводим в одну колонку на мобильных устройствах */
+    }
+}
