@@ -158,36 +158,36 @@ body {
 .footer p {
     margin: 0;
 }
-/* Ваши существующие стили остаются без изменений... */
+
 
 /* Медиа-запрос для экранов <= 480px */
 @media (max-width: 480px) {
     body {
-        font-size: 16px; /* Увеличим размер шрифта для лучшей читабельности */
+        font-size: 16px;
     }
 
     .header .container {
-        flex-direction: column; /* Меню станет вертикально расположенным */
+        flex-direction: column; 
         align-items: start;
     }
 
     .menu ul {
-        flex-direction: column; /* Меню переключится на вертикальное расположение */
+        flex-direction: column;
     }
 
     .menu li a {
-        padding: 10px 0; /* Интервал между пунктами меню увеличим */
+        padding: 10px 0; 
     }
 
     .main-section .container {
-        flex-direction: column-reverse; /* Левый и правый блоки поменяются местами */
+        flex-direction: column-reverse; 
         align-items: center;
     }
 
     .right-block img {
-        width: 100%; /* Изображение займёт всю ширину контейнера */
+        width: 100%; 
         height: auto;
-        margin: 0; /* Удалим отрицательные отступы */
+        margin: 0; 
     }
 
     .left-block {
