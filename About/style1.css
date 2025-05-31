@@ -18,7 +18,7 @@ body {
     padding: 20px;
 }
 
-/* Шапка */
+
 .header {
     background-color: #fff;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
@@ -60,7 +60,7 @@ body {
     color: #007bff;
 }
 
-/* Основная часть */
+
 .content {
     padding-top: 80px; /* Учитываем высоту фиксированной шапки */
 }
@@ -130,7 +130,7 @@ body {
     color: #0056b3;
 }
 
-/* Подвал */
+
 .footer {
     background-color: #222;
     color: #fff;
@@ -146,9 +146,8 @@ body {
 .two-columns {
     display: grid;
     grid-template-columns: 1fr 1fr; /* Две равные колонки */
-    gap: 20px; /* Расстояние между колонками */
+    gap: 20px; 
 }
-
 .column ul {
     list-style-type: disc;
     padding-left: 20px;

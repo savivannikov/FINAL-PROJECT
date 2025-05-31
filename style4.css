@@ -1,5 +1,49 @@
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f5f5f5;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    text-align: center;
+    width: 100%; /* Полная ширина контейнера */
+    padding: 20px;
+}
+
+.block {
+    padding: 10px 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,.1);
+    background-color: white;
+    margin: 10px 0; /* Пространство между блоками сверху и снизу */
+    display: block; 
+}
+
+h2 {
+    color: #333;
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+p {
+    color: #666;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+/* Кнопка возврата */
 .back-button {
-    position: absolute;
+    position: fixed; /* фиксируем кнопку вверху слева */
+    z-index: 100; /* ставим поверх всех элементов */
     top: 20px;
     left: 20px;
     padding: 10px 20px;
@@ -19,37 +63,42 @@
     background-color: #cc8800;
 }
 
-body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-    background-color: #f5f5f5;
+@media only screen and (max-width: 768px) {
+    body {
+        padding-top: 60px; /* Отступ для кнопки возвращения */
+    }
+
+    h2 {
+        font-size: 16px; /* уменьшаем заголовок */
+    }
+
+    p {
+        font-size: 12px; /* уменьшаем основной текст */
+    }
+
+    .block {
+        width: 100%; 
+    }
 }
 
-.container {
-    text-align: center;
-    font-family: Arial, sans-serif;
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+    .block {
+        width: 48%; /* делим экран пополам */
+        float: left;
+    }
 }
 
-.block {
-    padding: 10px 20px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0,0,0,.1);
-    background-color: white;
-    margin: 0 10px;
-    display: inline-block;
+
+@media only screen and (min-width: 1024px) {
+    .block {
+        width: 30%; 
+        float: left;
+    }
 }
 
-h2 {
-    color: #333;
-    font-size: 18px;
-    margin-bottom: 5px;
-}
-
-p {
-    color: #666;
-    font-size: 14px;
-    line-height: 1.5;
+.clearfix::after { /* Очистка плавающих блоков */
+    content: "";
+    clear: both;
+    display: table;
 }
